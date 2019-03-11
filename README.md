@@ -58,14 +58,14 @@ Finding Selenium web elements/xpaths by anchor(s) works for most of the normal W
 ## Example
 ````
 IWebDriver driver = new ChromeDriver();
-string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
+string url = "https://www.xero.com/au/signup/";
 driver.OpenPageByUrl(url);
 
 //find by xpath --> have to construct the xpath manually (inspect DOM carefully)
 IWebElement firstNameTextBox = driver.FindElementByXPath("//label[span[text()='First name']]/input");
 
 //what you see is what you may get approach (look at the web page and inspect DOM slightly just to get the tag names --> save scripting time
-ElementInfo anchorInfo = new ElementInfo("div", "First name"); //tag: div (optional); label displayed in web page: 'First name'
+ElementInfo anchorInfo = new ElementInfo("span", "First name"); //tag: span (optional); text displayed in web page: 'First name'
 ElementInfo searchInfo = new ElementInfo("input"); //tag: input 
 firstNameTextBox = driver.FindElementByAnchor(anchorInfo, searchInfo);
 firstNameTextBox.SendKeys("Tester");
