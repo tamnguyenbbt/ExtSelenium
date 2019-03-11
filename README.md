@@ -3,8 +3,8 @@ Extend Selenium with the following added methods.
 
 ## Methods
 The main extensions are the methods to find elements and xpaths by one anchor element or two andchor elements. 
-It is 'more what you see (in the web page) is what you get' than technically building the xpaths manually.
-Find elements by anchor(s) will work for most of the normal Web UI test scenarios. 
+It is **more what you see (in the web page) is what you get** than technically building the xpaths manually.
+Finding Selenium web elements/xpaths by anchor(s) works for most of the normal Web UI test scenarios. 
 
 ###
 
