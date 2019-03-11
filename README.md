@@ -72,11 +72,11 @@ firstNameTextBox.SendKeys("Tester");
 ````
             
 ## Versions
-* Version **1.0.0** released on 03/11/2019
+* Version **1.0.0.1** released on 03/11/2019
 
 ## NuGet
-* https://www.nuget.org/packages/ExtSelenium/1.0.0
-* Install-Package ExtSelenium -Version 1.0.0
+* https://www.nuget.org/packages/ExtSelenium/1.0.0.1
+* Install-Package ExtSelenium -Version 1.0.0.1
 
 ## Dependencies
 * .NETCoreApp 2.1
