@@ -54,14 +54,14 @@ The main extensions are the methods to find elements and XPATHs by one anchor el
 
 
 ## Example
-	IWebDriver driver = new ChromeDriver();
-        string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
-        driver.OpenPageByUrl(url);
+IWebDriver driver = new ChromeDriver();
+string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
+driver.OpenPageByUrl(url);
             
-        ElementInfo anchorInfo = new ElementInfo("div", "First name");
-        ElementInfo searchInfo = new ElementInfo("input");
-        firstNameTextBox = driver.FindElementByAnchor(anchorInfo, searchInfo);
-        firstNameTextBox.SendKeys("Tester");
+ElementInfo anchorInfo = new ElementInfo("div", "First name");
+ElementInfo searchInfo = new ElementInfo("input");
+firstNameTextBox = driver.FindElementByAnchor(anchorInfo, searchInfo);
+firstNameTextBox.SendKeys("Tester");
             
 ## Versions
 * Version **1.0.0** released on 03/11/2019
