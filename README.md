@@ -53,7 +53,7 @@ The main extensions are the methods to find elements and XPATHs by one anchor el
 * public static string **GetHtmlDocument**(this IWebDriver driver, int timeoutInSeconds = 10)
 
 
-## Example:
+## Example
 ###
 	    IWebDriver driver = new ChromeDriver();
             string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
@@ -67,7 +67,7 @@ The main extensions are the methods to find elements and XPATHs by one anchor el
 ## Versions
 * Version **1.0.0** released on 03/11/2019
 
-## Author:
+## Author
 ###  **Tam Nguyen**
 [![View My profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png)](https://www.linkedin.com/in/tam-nguyen-a0792930/)
 			
