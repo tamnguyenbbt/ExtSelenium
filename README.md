@@ -2,7 +2,7 @@
 Extend Selenium with the following added methods.
 
 ## Methods
-The main extensions are the methods to find elements and XPATHs by one anchor element or two andchor elements
+The main extensions are the methods to find elements and xpaths by one anchor element or two andchor elements. It is 'more what you see (in the web page) is what you get' than technically building the xpaths manually.
 
 ###
 
@@ -59,8 +59,8 @@ IWebDriver driver = new ChromeDriver();
 string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
 driver.OpenPageByUrl(url);
             
-ElementInfo anchorInfo = new ElementInfo("div", "First name");
-ElementInfo searchInfo = new ElementInfo("input");
+ElementInfo anchorInfo = new ElementInfo("div", "First name"); //anchor --> tag: div (optional); label displayed in web page: 'First name'
+ElementInfo searchInfo = new ElementInfo("input"); //web element to search --> tag: input 
 firstNameTextBox = driver.FindElementByAnchor(anchorInfo, searchInfo);
 firstNameTextBox.SendKeys("Tester");
 ````
