@@ -67,6 +67,16 @@ The main extensions are the methods to find elements and XPATHs by one anchor el
 ## Versions
 * Version **1.0.0** released on 03/11/2019
 
+## NuGet
+* https://www.nuget.org/packages/ExtSelenium/1.0.0
+* Install-Package ExtSelenium -Version 1.0.0
+
+## Dependencies
+* .NETCoreApp 2.1
+* dcsoup (>= 1.0.0)
+* Selenium.Support (>= 3.141.0)
+* Selenium.WebDriver (>= 3.141.0)
+
 ## Author
 ###  **Tam Nguyen**
 [![View My profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png)](https://www.linkedin.com/in/tam-nguyen-a0792930/)
