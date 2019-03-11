@@ -55,7 +55,7 @@ The main extensions are the methods to find elements and XPATHs by one anchor el
 
 ## Example:
 ###
-			IWebDriver driver = new ChromeDriver();
+	    IWebDriver driver = new ChromeDriver();
             string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
             driver.OpenPageByUrl(url);
             
