@@ -69,5 +69,5 @@ The main extensions are the methods to find elements and XPATHs by one anchor el
 
 ## Author:
 ###  **Tam Nguyen**
-###[![View My profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png)](https://www.linkedin.com/in/tam-nguyen-a0792930/)
+[![View My profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png)](https://www.linkedin.com/in/tam-nguyen-a0792930/)
 			
