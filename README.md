@@ -1,13 +1,10 @@
 # ExtSelenium
-Extend Selenium with the following added methods.
+Extend Selenium with the following added methods. Support .NetCore >=2.1
 
 ## Methods
-The main extensions are the methods to find elements and xpaths by one anchor element or two andchor elements. 
-It is more **what you see (in the web page) is what you get** than technically building the xpaths manually.
-Finding Selenium web elements/xpaths by anchor(s) works for most of the normal Web UI test scenarios. 
+The main extensions are the methods to find elements and xpaths by one anchor element or two anchor elements
 
 ###
-
 * public static IList<string> **FindXPathsByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
 * public static string **FindXPathByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
@@ -27,14 +24,30 @@ Finding Selenium web elements/xpaths by anchor(s) works for most of the normal W
 * public static IList<IWebElement> **FindElementsById**(this IWebDriver driver, string id, int timeoutInSeconds = 10)
        
 * public static IWebElement **FindElementById**(this IWebDriver driver, string id, int timeoutInSeconds = 10)
+
+* public static IList<IWebElement> **FindElementsByClassName**(this IWebDriver driver, string className, int timeoutInSeconds = 10)
+       
+* public static IWebElement **FindElementByClassName**(this IWebDriver driver, string className, int timeoutInSeconds = 10)
+
+* public static IList<IWebElement> **FindElementsByName**(this IWebDriver driver, string name, int timeoutInSeconds = 10)
+       
+* public static IWebElement **FindElementByName**(this IWebDriver driver, string name, int timeoutInSeconds = 10)
         
 * public static IList<IWebElement> **FindElementsByTagName**(this IWebDriver driver, string tagName, int timeoutInSeconds = 10)
        
 * public static IWebElement **FindElementByTagName**(this IWebDriver driver, string tagName, int timeoutInSeconds = 10)
+
+* public static IList<IWebElement> **FindElementsByCssSelector**(this IWebDriver driver, string cssSelector, int timeoutInSeconds = 10)
+        
+* public static IWebElement **FindElementByCssSelector***(this IWebDriver driver, string cssSelector, int timeoutInSeconds = 10)
         
 * public static IList<IWebElement> **FindElementsByXPath**(this IWebDriver driver, string xPath, int timeoutInSeconds = 10)
         
 * public static IWebElement **FindElementByXPath**(this IWebDriver driver, string xPath, int timeoutInSeconds = 10)
+
+* public static IList<IWebElement> **FindElementsByPartialLinkText**(this IWebDriver driver, string partialLinkText, int timeoutInSeconds = 10)
+        
+* public static IWebElement **FindElementByPartialLinkText**(this IWebDriver driver, string partialLinkText, int timeoutInSeconds = 10)
        
 * public static IList<IWebElement> **FindElementsByLinkText**(this IWebDriver driver, string linkText, int timeoutInSeconds = 10)
         
@@ -56,33 +69,54 @@ Finding Selenium web elements/xpaths by anchor(s) works for most of the normal W
 
 
 ## Example
-````
-IWebDriver driver = new ChromeDriver();
-string url = "https://www.xero.com/au/signup/";
-driver.OpenPageByUrl(url);
 
-//find by xpath --> have to construct the xpath manually (inspect DOM carefully)
-IWebElement firstNameTextBox = driver.FindElementByXPath("//label[span[text()='First name']]/input");
-
-//what you see is what you may get approach (look at the web page and inspect DOM slightly just to get the tag names --> save scripting time
-ElementInfo anchorInfo = new ElementInfo("span", "First name"); //tag: span (optional); text displayed in web page: 'First name'
-ElementInfo searchInfo = new ElementInfo("input"); //tag: input 
-firstNameTextBox = driver.FindElementByAnchor(anchorInfo, searchInfo);
-firstNameTextBox.SendKeys("Tester");
-````
+	    IWebDriver driver = new ChromeDriver();
+        string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
+        driver.OpenPageByUrl(url);
+            
+        ElementInfo anchorInfo = new ElementInfo("div", "First name");
+        ElementInfo searchInfo = new ElementInfo("input");
+        firstNameTextBox = driver.FindElementByAnchor(anchorInfo, searchInfo);
+        firstNameTextBox.SendKeys("Tester");
             
 ## Versions
+* Version **1.0.0.2** released on 03/14/2019
 * Version **1.0.0.1** released on 03/11/2019
 
 ## NuGet
-* https://www.nuget.org/packages/ExtSelenium/1.0.0.1
-* Install-Package ExtSelenium -Version 1.0.0.1
+* https://www.nuget.org/packages/ExtSelenium/1.0.0.2
+* Install-Package ExtSelenium -Version 1.0.0.2
 
 ## Dependencies
-* .NETCoreApp 2.1
-* dcsoup (>= 1.0.0)
-* Selenium.Support (>= 3.141.0)
-* Selenium.WebDriver (>= 3.141.0)
+###.NETCoreApp 2.0
+*dcsoup (>= 1.0.0)
+*Selenium.Support (>= 3.141.0)
+*Selenium.WebDriver (>= 3.141.0)
+*System.Net.Http (>= 4.3.4)
+
+###.NETCoreApp 2.1
+*dcsoup (>= 1.0.0)
+*Selenium.Support (>= 3.141.0)
+*Selenium.WebDriver (>= 3.141.0)
+*System.Net.Http (>= 4.3.4)
+
+###.NETFramework 4.5
+*dcsoup (>= 1.0.0)
+*Selenium.Support (>= 3.141.0)
+*Selenium.WebDriver (>= 3.141.0)
+*System.Net.Http (>= 4.3.4)
+
+###.NETFramework 4.6
+*dcsoup (>= 1.0.0)
+*Selenium.Support (>= 3.141.0)
+*Selenium.WebDriver (>= 3.141.0)
+*System.Net.Http (>= 4.3.4)
+
+###.NETStandard 2.0
+*dcsoup (>= 1.0.0)
+*Selenium.Support (>= 3.141.0)
+*Selenium.WebDriver (>= 3.141.0)
+*System.Net.Http (>= 4.3.4)
 
 ## Author
 ###  **Tam Nguyen**
