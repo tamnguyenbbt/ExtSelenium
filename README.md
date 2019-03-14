@@ -88,35 +88,35 @@ The main extensions are the methods to find elements and xpaths by one anchor el
 * Install-Package ExtSelenium -Version 1.0.0.2
 
 ## Dependencies
-*.NETCoreApp 2.0
-*dcsoup (>= 1.0.0)
-*Selenium.Support (>= 3.141.0)
-*Selenium.WebDriver (>= 3.141.0)
-*System.Net.Http (>= 4.3.4)
+### .NETCoreApp 2.0
+* dcsoup (>= 1.0.0)
+* Selenium.Support (>= 3.141.0)
+* Selenium.WebDriver (>= 3.141.0)
+* System.Net.Http (>= 4.3.4)
 
-*.NETCoreApp 2.1
-*dcsoup (>= 1.0.0)
-*Selenium.Support (>= 3.141.0)
-*Selenium.WebDriver (>= 3.141.0)
-*System.Net.Http (>= 4.3.4)
+### .NETCoreApp 2.1
+* dcsoup (>= 1.0.0)
+* Selenium.Support (>= 3.141.0)
+* Selenium.WebDriver (>= 3.141.0)
+* System.Net.Http (>= 4.3.4)
 
-*.NETFramework 4.5
-*dcsoup (>= 1.0.0)
-*Selenium.Support (>= 3.141.0)
-*Selenium.WebDriver (>= 3.141.0)
-*System.Net.Http (>= 4.3.4)
+### .NETFramework 4.5
+* dcsoup (>= 1.0.0)
+* Selenium.Support (>= 3.141.0)
+* Selenium.WebDriver (>= 3.141.0)
+* System.Net.Http (>= 4.3.4)
 
-*.NETFramework 4.6
-*dcsoup (>= 1.0.0)
-*Selenium.Support (>= 3.141.0)
-*Selenium.WebDriver (>= 3.141.0)
-*System.Net.Http (>= 4.3.4)
+### .NETFramework 4.6
+* dcsoup (>= 1.0.0)
+* Selenium.Support (>= 3.141.0)
+* Selenium.WebDriver (>= 3.141.0)
+* System.Net.Http (>= 4.3.4)
 
-*.NETStandard 2.0
-*dcsoup (>= 1.0.0)
-*Selenium.Support (>= 3.141.0)
-*Selenium.WebDriver (>= 3.141.0)
-*System.Net.Http (>= 4.3.4)
+### .NETStandard 2.0
+* dcsoup (>= 1.0.0)
+* Selenium.Support (>= 3.141.0)
+* Selenium.WebDriver (>= 3.141.0)
+* System.Net.Http (>= 4.3.4)
 
 ## Author
 ###  **Tam Nguyen**
