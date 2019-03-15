@@ -1,5 +1,5 @@
 # ExtSelenium
-Extend Selenium with the following added methods. Support .NetCore >=2.1
+Extend Selenium with the following added methods.
 
 ## Methods
 The main extensions are the methods to find elements and xpaths by one anchor element or two anchor elements
