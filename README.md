@@ -70,7 +70,7 @@ public static void SwitchToParentFrame(this IWebDriver driver)
         
 public static void SwitchToFrame(this IWebDriver driver, string name)
        
-public static IList<string> GetIFrameName(this IWebDriver driver, int timeoutInSeconds = 10)
+public static IList<string> GetIFrameNames(this IWebDriver driver, int timeoutInSeconds = 10)
        
 public static string GetActiveFrameName(this IWebDriver driver)
        
