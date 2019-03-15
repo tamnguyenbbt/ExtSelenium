@@ -6,75 +6,75 @@ The main extensions are the methods to find elements and xpaths by one anchor el
 
 ###
 ````
-* public static IList<string> **FindXPathsByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IList<string> FindXPathsByTwoAnchors(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
-* public static string **FindXPathByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static string FindXPathByTwoAnchors(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
-* public static IList<string> **FindXPathsByAnchor**(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IList<string> FindXPathsByAnchor(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
-* public static string **FindXPathByAnchor**(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static string FindXPathByAnchor(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
-* public static IList<string> **FindXPaths**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IList<string> FindXPaths(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
-* public static string **FindXPath**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static string FindXPath(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
-* public static IList<IWebElement> **FindElementsByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IList<IWebElement> FindElementsByTwoAnchors(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
-* public static IWebElement **FindElementByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IWebElement FindElementByTwoAnchors(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
-* public static IList<IWebElement> **FindElementsByAnchor**(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IList<IWebElement> FindElementsByAnchor(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
-* public static IWebElement **FindElementByAnchor**(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IWebElement FindElementByAnchor(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
-* public static IList<IWebElement> **FindElements**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IList<IWebElement> FindElements(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
-* public static IWebElement **FindElement**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+public static IWebElement FindElement(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
-* public static IList<IWebElement> **FindElementsById**(this IWebDriver driver, string id, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsById(this IWebDriver driver, string id, int timeoutInSeconds = 10)
        
-* public static IWebElement **FindElementById**(this IWebDriver driver, string id, int timeoutInSeconds = 10)
+public static IWebElement FindElementById(this IWebDriver driver, string id, int timeoutInSeconds = 10)
 
-* public static IList<IWebElement> **FindElementsByClassName**(this IWebDriver driver, string className, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsByClassName(this IWebDriver driver, string className, int timeoutInSeconds = 10)
        
-* public static IWebElement **FindElementByClassName**(this IWebDriver driver, string className, int timeoutInSeconds = 10)
+public static IWebElement FindElementByClassName(this IWebDriver driver, string className, int timeoutInSeconds = 10)
 
-* public static IList<IWebElement> **FindElementsByName**(this IWebDriver driver, string name, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsByName(this IWebDriver driver, string name, int timeoutInSeconds = 10)
        
-* public static IWebElement **FindElementByName**(this IWebDriver driver, string name, int timeoutInSeconds = 10)
+public static IWebElement FindElementByName(this IWebDriver driver, string name, int timeoutInSeconds = 10)
         
-* public static IList<IWebElement> **FindElementsByTagName**(this IWebDriver driver, string tagName, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsByTagName(this IWebDriver driver, string tagName, int timeoutInSeconds = 10)
        
-* public static IWebElement **FindElementByTagName**(this IWebDriver driver, string tagName, int timeoutInSeconds = 10)
+public static IWebElement FindElementByTagName(this IWebDriver driver, string tagName, int timeoutInSeconds = 10)
 
-* public static IList<IWebElement> **FindElementsByCssSelector**(this IWebDriver driver, string cssSelector, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsByCssSelector(this IWebDriver driver, string cssSelector, int timeoutInSeconds = 10)
         
-* public static IWebElement **FindElementByCssSelector***(this IWebDriver driver, string cssSelector, int timeoutInSeconds = 10)
+public static IWebElement FindElementByCssSelector(this IWebDriver driver, string cssSelector, int timeoutInSeconds = 10)
         
-* public static IList<IWebElement> **FindElementsByXPath**(this IWebDriver driver, string xPath, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsByXPath(this IWebDriver driver, string xPath, int timeoutInSeconds = 10)
         
-* public static IWebElement **FindElementByXPath**(this IWebDriver driver, string xPath, int timeoutInSeconds = 10)
+public static IWebElement FindElementByXPath(this IWebDriver driver, string xPath, int timeoutInSeconds = 10)
 
-* public static IList<IWebElement> **FindElementsByPartialLinkText**(this IWebDriver driver, string partialLinkText, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsByPartialLinkText(this IWebDriver driver, string partialLinkText, int timeoutInSeconds = 10)
         
-* public static IWebElement **FindElementByPartialLinkText**(this IWebDriver driver, string partialLinkText, int timeoutInSeconds = 10)
+public static IWebElement FindElementByPartialLinkText(this IWebDriver driver, string partialLinkText, int timeoutInSeconds = 10)
        
-* public static IList<IWebElement> **FindElementsByLinkText**(this IWebDriver driver, string linkText, int timeoutInSeconds = 10)
+public static IList<IWebElement> FindElementsByLinkText(this IWebDriver driver, string linkText, int timeoutInSeconds = 10)
         
-* public static IWebElement **FindElementByLinkText**(this IWebDriver driver, string linkText, int timeoutInSeconds = 10)
+public static IWebElement FindElementByLinkText(this IWebDriver driver, string linkText, int timeoutInSeconds = 10)
         
-* public static void **OpenPageByUrl**(this IWebDriver driver, string url)
+public static void OpenPageByUrl(this IWebDriver driver, string url)
         
-* public static void **SwitchToDefaultContent**(this IWebDriver driver)
+public static void SwitchToDefaultContent(this IWebDriver driver)
         
-* public static void **SwitchToParentFrame**(this IWebDriver driver)
+public static void SwitchToParentFrame(this IWebDriver driver)
         
-* public static void **SwitchToFrame**(this IWebDriver driver, string name)
+public static void SwitchToFrame(this IWebDriver driver, string name)
        
-* public static IList<string> **GetIFrameNames**(this IWebDriver driver, int timeoutInSeconds = 10)
+public static IList<string> GetIFrameName(this IWebDriver driver, int timeoutInSeconds = 10)
        
-* public static string **GetActiveFrameName**(this IWebDriver driver)
+public static string GetActiveFrameName(this IWebDriver driver)
        
-* public static string **GetHtmlDocument**(this IWebDriver driver, int timeoutInSeconds = 10)
+public static string GetHtmlDocument(this IWebDriver driver, int timeoutInSeconds = 10)
 ````
 
 ## Example
