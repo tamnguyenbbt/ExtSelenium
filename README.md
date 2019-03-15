@@ -105,10 +105,10 @@ The main extensions are the methods to find elements and xpaths by one anchor el
          string url = "http://myweb.com";
          driver.OpenPageByUrl(url);
 
-         //By Selenium ID
+         //by Selenium ID
          IWebElement userNameElement = driver.FindElement(By.Id("txtUserID"));
          
-         //By ExtSelenium ID
+         //by ExtSelenium ID
          userNameElement = driver.FindElementById("txtUserID");
          userNameElement.SendKeys(userName);
          
