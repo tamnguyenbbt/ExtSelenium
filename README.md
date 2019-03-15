@@ -1,5 +1,5 @@
 # ExtSelenium
-Extend Selenium with the following added methods.
+Extend Selenium with the following added methods. Support .NetCore >=2.1
 
 ## Methods
 The main extensions are the methods to find elements and xpaths by one anchor element or two anchor elements
@@ -13,6 +13,10 @@ The main extensions are the methods to find elements and xpaths by one anchor el
         
 * public static string **FindXPathByAnchor**(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
+* public static IList<string> **FindXPaths**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+        
+* public static string **FindXPath**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+       
 * public static IList<IWebElement> **FindElementsByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
        
 * public static IWebElement **FindElementByTwoAnchors**(this IWebDriver driver, ElementInfo parentAnchorElementInfo, ElementInfo anchorElementInfo, string searchCssSelector, int timeoutInSeconds = 10, DomUtilConfig config = null)
@@ -21,6 +25,10 @@ The main extensions are the methods to find elements and xpaths by one anchor el
        
 * public static IWebElement **FindElementByAnchor**(this IWebDriver driver, ElementInfo anchorElementInfo, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
         
+* public static IList<IWebElement> **FindElements**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+        
+* public static IWebElement **FindElement**(this IWebDriver driver, ElementInfo searchElementInfo, int timeoutInSeconds = 10, DomUtilConfig config = null)
+       
 * public static IList<IWebElement> **FindElementsById**(this IWebDriver driver, string id, int timeoutInSeconds = 10)
        
 * public static IWebElement **FindElementById**(this IWebDriver driver, string id, int timeoutInSeconds = 10)
@@ -69,23 +77,83 @@ The main extensions are the methods to find elements and xpaths by one anchor el
 
 
 ## Example
-
+### Example 1
 	    IWebDriver driver = new ChromeDriver();
-        string url = "https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp";
+        string url = "https://www.xero.com/au/signup/";
         driver.OpenPageByUrl(url);
-            
-        ElementInfo anchorInfo = new ElementInfo("div", "First name");
+        
+        //find a text box with its tag as 'input' under a label containing a tag 'span' and its text as 'First name'
+        //by Selenium XPath
+        IWebElement firstNameTextBox = driver.FindElement(By.XPath("//label[span[contains(text(),'First name')]]/input"));
+        
+        //by ExtSelenium XPath
+        firstNameTextBox = driver.FindElementByXPath("//label[span[contains(text(),'First name')]]/input");
+        
+        //by ExtSelenium Anchor
+        ElementInfo anchorInfo = new ElementInfo("span", "First name");
         ElementInfo searchInfo = new ElementInfo("input");
         firstNameTextBox = driver.FindElementByAnchor(anchorInfo, searchInfo);
+        
         firstNameTextBox.SendKeys("Tester");
+        
+        driver.Close();
+        
+### Example 2
+	     IWebDriver driver = new ChromeDriver();
+         string userName = "myUserName";
+         string password = "myPassword";
+         string url = "http://myweb.com";
+         driver.OpenPageByUrl(url);
+
+         //By Selenium ID
+         IWebElement userNameElement = driver.FindElement(By.Id("txtUserID"));
+         
+         //By ExtSelenium ID
+         userNameElement = driver.FindElementById("txtUserID");
+         userNameElement.SendKeys(userName);
+         
+         //find a text box with its tag as 'input' under a label with its text as 'Password'
+         //by ExtSelenium Anchor
+         IWebElement passwordElement = driver.FindElementByAnchor(new ElementInfo("Password"), new ElementInfo("input"));
+         passwordElement.SendKeys(password);
+         
+         //by ExtSelenium Id
+         IWebElement loginButtonElement = driver.FindElementById("login");         
+         loginButtonElement.Click();
+
+         driver.SwitchToDefaultContent();
+         
+         //by ExtSelenium
+         IWebElement reportsLink = driver.FindElement(new ElementInfo("span", "Reports"));
+         reportsLink.Click();
+
+         IList<string> iFrames = driver.GetIFrameNames();
+         driver.SwitchToFrame(iFrames[1]);
+         
+         //find a link with link text as 'TestLink'
+         //by Selenium XPath
+         IWebElement testLink = driver.FindElement(By.XPath("//a[contains(text(), 'TextLink')]"));
+         
+         //by ExtSelenium XPath
+         testLink = driver.FindElementByXPath("//a[contains(text(), 'TextLink')]");
+         
+         //by ExtSelenium Anchor
+         testLink = driver.FindElementByAnchor(new ElementInfo("a", "TextLink"), new ElementInfo("a"));
+         
+         //by ExtSelenium - anchor element and search element are the same element
+         testLink = driver.FindElement(new ElementInfo("a", "TestLink"));
+         testLink.Click();
+
+         driver.Quit();
             
 ## Versions
+* Version **1.0.0.3** released on 03/15/2019
 * Version **1.0.0.2** released on 03/14/2019
 * Version **1.0.0.1** released on 03/11/2019
 
 ## NuGet
-* https://www.nuget.org/packages/ExtSelenium/1.0.0.2
-* Install-Package ExtSelenium -Version 1.0.0.2
+* https://www.nuget.org/packages/ExtSelenium/1.0.0.3
+* Install-Package ExtSelenium -Version 1.0.0.3
 
 ## Dependencies
 ### .NETCoreApp 2.0
@@ -121,4 +189,3 @@ The main extensions are the methods to find elements and xpaths by one anchor el
 ## Author
 ###  **Tam Nguyen**
 [![View My profile on LinkedIn](https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png)](https://www.linkedin.com/in/tam-nguyen-a0792930/)
-			
