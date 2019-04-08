@@ -148,13 +148,14 @@ public static string GetHtmlDocument(this IWebDriver driver, int timeoutInSecond
          driver.Quit();
             
 ## Versions
+* Version **1.0.0.6** released on 04/08/2019
 * Version **1.0.0.3** released on 03/15/2019
 * Version **1.0.0.2** released on 03/14/2019
 * Version **1.0.0.1** released on 03/11/2019
 
 ## NuGet
-* https://www.nuget.org/packages/ExtSelenium/1.0.0.3
-* Install-Package ExtSelenium -Version 1.0.0.3
+* https://www.nuget.org/packages/ExtSelenium/1.0.0.6
+* Install-Package ExtSelenium -Version 1.0.0.6
 
 ## Dependencies
 ### .NETCoreApp 2.0
